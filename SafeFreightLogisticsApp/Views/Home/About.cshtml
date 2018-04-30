@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Safe Freight Logistic - About";
+}
+
+
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index")</li>
+                        <li class="hidden-sm active">@Html.ActionLink("About", "About")</li>
+                        <li class="hidden-sm">@Html.ActionLink( "Services", "Services" )</li>
+
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink( "Shipment List", "Index", "Mathely_Logistics_Shipments" )</li>
+                                    <li>@Html.ActionLink( "Setup", "Index", "Mathely_Logistics_Admin" )</li>
+
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>About Our Company</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+}
+
+
+<!-- =-=-=-=-=-=-= About Section =-=-=-=-=-=-= -->
+
+<section class="padding-top-70" id="about">
+    <div class="container">
+        <div class="row clearfix">
+            <!--Column-->
+            <div class="col-md-7 col-sm-12 col-xs-12 ">
+                <div class="about-title">
+                    <h2>We Provide Services All Over The World</h2>
+                    <p>SFL – Safe Freight Logistics is a company founded to be a strategic partner in North America, for companies and individuals all over the world who share the need for a complete 3rd party logistics service to accomplish their transportation needs, thus obtaining maximum benefits by streamlining their needs through automation.</p>
+                    <p>We are committed to relentlessly exceeding customers' expectations through innovative delivery solutions.</p>
+                    <p>Our mission is to exceed our customers' expectations by providing a complete package of inland freight solutions paired with the best service and technology in the industry.</p>
+                    <p>We place high value on maintaining and enhancing quality in every facet of the organization. Improving processes, eliminating bottlenecks and increasing efficiency of daily operations is an on-going cycle in GIGL. This is why we have designed and implemented a quality management system to ensure consistent levels of high standard at all times. We evaluate these standards regularly and work on technological and process innovations to improve upon them.</p>
+                </div>
+
+            </div>
+
+            <!-- RIght Grid Form -->
+            <div class="col-md-5 col-sm-12 col-xs-12 our-gallery">
+                <a class="tt-lightbox" href="~/content/images/about-company-1.png"> <img class="img-responsive margin-bottom-30" alt="Image" src="~/content/images/about-company-1.png"></a>
+                <a class="tt-lightbox" href="~/content/images/about-company-2.png"> <img class="img-responsive margin-bottom-30" alt="Image" src="~/content/images/about-company-2.png"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =-=-=-=-=-=-= About End =-=-=-=-=-=-= -->

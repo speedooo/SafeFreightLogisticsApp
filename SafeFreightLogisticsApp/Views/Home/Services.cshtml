@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "Safe Freight Logistics- Services";
+}
+
+
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index")</li>
+                        <li class="hidden-sm">@Html.ActionLink("About", "About")</li>
+                        <li class="hidden-sm active">@Html.ActionLink( "Services", "Services" )</li>
+
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                    <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>Our Services </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+}
+
+
+<!-- =-=-=-=-=-=-= Our Services =-=-=-=-=-=-= -->
+<section class="custom-padding services">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div id="services-2">
+                <!-- Service Item List -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <!-- services grid -->
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-box-of-packing-for-delivery"></i></div>
+                        <h4>packaging and storage</h4>
+                        <p>Your packages are guaranteed to arrive safely and well packaged.</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-ocean-transportation"></i></div>
+                        <h4>cargo</h4>
+                        <p>Whatever may be your cargo requirements, we can handle them.</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-delivery-truck"></i></div>
+                        <h4>worldwide transport </h4>
+                        <p>Our services are available on a global scale.</p>
+                    </div>
+                </div>
+
+                <div class="clearfix  hidden-sm"></div>
+                <!-- Service Item List -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <!-- services grid -->
+
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-view-symbol-on-delivery-opened-box"></i></div>
+                        <h4>ware housing</h4>
+                        <p>Storage in our warehouses is another very critical service.</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-sea-ship-with-containers"></i></div>
+                        <h4>Sea Freight</h4>
+                        <p>By sea, our delivery service is second to none.</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-delivery-truck-with-packages-behind"></i></div>
+                        <h4>Door To Door Delivery </h4>
+                        <p>We have the right caring, experienced and dedicated professionals for you.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <!-- services grid -->
+
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-international-delivery-symbol"></i></div>
+                        <h4>global trasport</h4>
+                        <p>Wherever you are, we will send your goods to you</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-logistics-delivery-truck-in-movement"></i></div>
+                        <h4>fast delivery</h4>
+                        <p>We are never late. We are always on time.</p>
+                    </div>
+                </div>
+                <!-- services grid -->
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <div class="services-grid">
+                        <div class="icons"> <i class="flaticon-24-hours-symbol"></i></div>
+                        <h4>24/7 Support </h4>
+                        <p>Around-the-clock availability is one of our strongpoints.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- Service Item List End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- =-=-=-=-=-=-= Our Services-end =-=-=-=-=-=-= -->

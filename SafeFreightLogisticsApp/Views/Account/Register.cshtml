@@ -1,0 +1,117 @@
+﻿@model SafeFreightLogisticsApp.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Safe Freight Logistics - Register";
+}
+
+
+@section morecss
+{
+    @Styles.Render("~/Content/bootstrap.css")
+    @Styles.Render("~/Content/site.css")
+}
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("Services", "Services", "Home")</li>
+                        @*<li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+
+                            </ul>
+                        </li>*@
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>Register Your Account</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+}
+
+
+
+<section id="order-tracking" class="section-padding-40">
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-default" value="Register" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,159 @@
+﻿@using SafeFreightLogisticsApp.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Safe Freight Logistics - Log in";
+}
+
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("Services", "Services", "Home")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>Admin</h3>
+                        <h2>Login Page</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+}
+
+
+
+<!-- =-=-=-=-=-=-= Sign In Section =-=-=-=-=-=-= -->
+
+<section class="section-padding-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                @*<form class="registration">
+                    <div class="box-header">
+                        <h2>Login to your account</h2>
+                    </div>
+
+                    <label>User Name</label>
+                    <input type="text" class="form-control margin-bottom-20">
+
+                    <label>Password <span class="color-red">*</span></label>
+                    <input type="password" class="form-control margin-bottom-20">
+
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="checkbox checkbox-default">
+                                <input type="checkbox" id="checkbox2" checked="">
+                                <label for="checkbox2">
+                                    Stay signed in
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 row col-sm-4 col-xs-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Forget your Password ?</h4>
+                    <p>no worries, <a href="#" class="color-green">click here</a> to reset your password.
+                    </p>
+                </form>*@
+
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "registration" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="box-header">
+                        <h2>Login to your account</h2>
+                    </div>
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control margin-bottom-20" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control margin-bottom-20" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="checkbox checkbox-default">
+                                <input type="checkbox" id="checkbox2" checked="">
+                                <label for="checkbox2">
+                                    Stay signed in
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 row col-sm-4 col-xs-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Forget your Password ?</h4>
+                    <p>
+                        no worries, <a href="#" class="color-green">click here</a> to reset your password.
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =-=-=-=-=-=-= Section End =-=-=-=-=-=-= -->
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

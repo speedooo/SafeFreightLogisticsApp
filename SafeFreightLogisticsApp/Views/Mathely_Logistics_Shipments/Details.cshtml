@@ -1,0 +1,303 @@
+﻿@model SafeFreightLogisticsApp.Models.Shipment
+
+@{
+    ViewBag.Title = "Safe Freight Logistic - Shipment Details";
+}
+
+
+@section morecss
+{
+    @Styles.Render("~/Content/bootstrap.css")
+    @Styles.Render("~/Content/site.css")
+}
+
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("Services", "Services", "Home")</li>
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>Shipment Details for Tracking Number @Model.TrackingNumber</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+}
+
+
+<!-- =-=-=-=-=-=-= Shipment Details Top =-=-=-=-=-=-= -->
+<section id="order-tracking" class="section-padding-80">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div class="col-sm-7 col-xs-7 col-md-7">
+                <!-- Shipment Details -->
+                <div class="block-content">
+                    <div>
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.TrackingNumber)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.TrackingNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ShipperName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ShipperName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ShipperAddress)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ShipperAddress)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ShipperPhone)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ShipperPhone)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ShipperEmail)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ShipperEmail)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ReceiverName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ReceiverName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ReceiverAddress)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ReceiverAddress)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ReceiverPhone)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ReceiverPhone)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ReceiverEmail)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ReceiverEmail)
+                            </dd>
+
+                            @*<dt>
+                                    @Html.DisplayNameFor(model => model.Status)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Status)
+                                </dd>*@
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PackageOrigin)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PackageOrigin)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PackageDestination)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PackageDestination)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CarrierRefNumber)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CarrierRefNumber)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Product)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Product)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Quantity)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Quantity)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PickupDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PickupDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PickupTime)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PickupTime)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ExpectedDeliveryDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ExpectedDeliveryDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Weight)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Weight)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PaymentMode)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PaymentMode)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ShipmentMode)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ShipmentMode)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Comments)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Comments)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastModifiedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastModifiedDate)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Back to Shipment List", "Index", "Mathely_Logistics_Shipments", null, new { @class = "btn btn-primary btn-lg", @role = "button" })
+                        @Html.ActionLink("Edit", "Edit", "Mathely_Logistics_Shipments", new { id = Model.ShipmentId }, new { @class = "btn btn-warning btn-lg", @role = "button" })
+                    </p>
+                </div>
+                <!-- Shipment Details End -->
+            </div>
+            <div class="col-sm-5 col-xs-5 col-md-5">
+                <!-- services grid -->
+                <div class="services-grid">
+                    <div class="icons">
+                        <i class="flaticon-view-symbol-on-delivery-opened-box"></i>
+                    </div>
+                    <h4>@Html.DisplayNameFor(model => model.Status)</h4>
+                    <p>@Html.DisplayFor(model => model.Status)</p>
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- =-=-=-=-=-=-= Shipment Details Top End =-=-=-=-=-=-= -->

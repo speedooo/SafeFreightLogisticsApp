@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Safe Freight Logistics - Admin";
+}
+
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-sm">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("About", "About", "Home")</li>
+                        <li class="hidden-sm">@Html.ActionLink("Services", "Services", "Home")</li>
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+@section pagebreadcrumb
+{
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+    <section class="breadcrumbs-area parallex">
+        <div class="container">
+            <div class="row">
+                <div class="page-title">
+                    <div class="col-sm-12 col-md-6 page-heading text-left">
+                        <h3>Admin Setup Page</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+}
+
+
+<!-- =-=-=-=-=-=-= Our Services =-=-=-=-=-=-= -->
+<section class="custom-padding services">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div id="services-2">
+                <!-- Service Item List -->
+                <a href="@Url.Action("CountriesIndex", "Mathely_Logistics_Admin")">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
+                        <!-- services grid -->
+                        <div class="services-grid">
+                            <div class="icons"> <i class="flaticon-international-delivery"></i></div>
+                            <h4>Countries</h4>
+                            <p>Setup pages for country list</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- services grid -->
+                <a href="@Url.Action("HalfHourlyTimesIndex", "Mathely_Logistics_Admin")">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
+                        <div class="services-grid">
+                            <div class="icons"> <i class="flaticon-logistics-delivery-truck-and-clock"></i></div>
+                            <h4>Pickup Times</h4>
+                            <p>Setup pages for half-hourly pickup times</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- services grid -->
+                <a href="@Url.Action("PaymentModesIndex", "Mathely_Logistics_Admin")">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
+                        <div class="services-grid">
+                            <div class="icons"> <i class="flaticon-delivery-box-on-a-hand"></i></div>
+                            <h4>Payment Modes</h4>
+                            <p>Setup pages for payment modes</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="@Url.Action("ShipmentModesIndex", "Mathely_Logistics_Admin")">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
+                        <!-- services grid -->
+
+                        <div class="services-grid">
+                            <div class="icons"> <i class="flaticon-sea-ship-with-containers"></i></div>
+                            <h4>Shipment Modes</h4>
+                            <p>Setup pages for shipment modes</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix  hidden-sm"></div>
+                <!-- Service Item List -->
+                
+                
+                <div class="clearfix"></div>
+                <!-- Service Item List End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- =-=-=-=-=-=-= Our Services-end =-=-=-=-=-=-= -->

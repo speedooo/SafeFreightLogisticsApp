@@ -1,0 +1,669 @@
+﻿@{
+    ViewBag.Title = "Safe Freight Logistics";
+}
+
+@section morecss
+{
+    <!-- Revolution Slider 5.x CSS settings -->
+    <!-- For This Page Only -->
+    <link href="~/content/js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="~/content/js/revolution-slider/css/navigation.css" rel="stylesheet" type="text/css" />
+}
+
+@section menusection
+{
+    <!-- Menu Section -->
+    <div class="navigation-2">
+        <!-- navigation-start -->
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navigation-2">
+                    <!-- navigation-start -->
+                    <nav class="navbar navbar-default ">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="main-navigation">
+                                <ul class="nav navbar-nav">
+
+                                    <li class="hidden-sm active">@Html.ActionLink("Home", "Index")</li>
+                                    <li class="hidden-sm">@Html.ActionLink("About", "About")</li>
+                                    <li class="hidden-sm">@Html.ActionLink( "Services", "Services" )</li>
+
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Admin <span class="fa fa-angle-down"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li>@Html.ActionLink("Shipment List", "Index", "Mathely_Logistics_Shipments")</li>
+                                                <li>@Html.ActionLink("Setup", "Index", "Mathely_Logistics_Admin")</li>
+
+                                            </ul>
+                                        </li>
+                                    }
+                                    
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+
+                        </div>
+                        <!-- /.container-end -->
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>
+            <!-- /.container-end -->
+        </nav>
+    </div>
+    <!-- /.navigation-end -->
+    <!-- Menu  End -->
+}
+
+
+<!-- =-=-=-=-=-=-= HOME SLIDER =-=-=-=-=-=-= -->
+<div class="rev_slider_wrapper">
+    <div class="rev_slider" data-version="5.0">
+        <ul>
+
+            <!-- SLIDE 1 -->
+            <li data-index="rs-4" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/content/images/slider/thumb-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="~/content/images/slider/1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                <!-- LAYERS -->
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption tp-resizeme text-white text-uppercase"
+                     id="rs-3-layer-1"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-125']"
+                     data-fontsize="['26']"
+                     data-lineheight="['64']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:700;">
+                    Always the best services
+                </div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption tp-resizeme text-uppercase text-white font-merry"
+                     id="rs-3-layer-2"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-60']"
+                     data-fontsize="['40']"
+                     data-lineheight="['84']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:600; ">
+                    <span class="text-white">Providing Logistic Services </span>
+                </div>
+
+                <!-- LAYER NR. 2 -->
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption tp-resizeme text-white"
+                     id="rs-3-layer-3"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['20']"
+                     data-fontsize="['18']"
+                     data-lineheight="['34']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1400"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:300;">
+                    Improving processes, eliminating bottlenecks and increasing efficiency
+                </div>
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption tp-resizeme"
+                     id="rs-3-layer-4"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['100']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1600"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                    @*<a class="btn btn-colored btn-lg" href="#">Contact Now</a>*@
+                </div>
+            </li>
+
+            <!-- SLIDE 2 -->
+            <li data-index="rs-1" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/content/images/slider/thumb-2.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="~/content/images/slider/2.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                <!-- LAYERS -->
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption tp-resizeme text-uppercase text-white "
+                     id="rs-1-layer-1"
+                     data-x="['right']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-125']"
+                     data-fontsize="['26']"
+                     data-lineheight="['64']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:700;">
+                   Customer Satisfaction is important to us.
+                </div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption tp-resizeme text-white font-merry  text-uppercase"
+                     id="rs-1-layer-2"
+                     data-x="['right']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-60']"
+                     data-fontsize="['40']"
+                     data-lineheight="['84']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:700;">
+                    Logistic Services
+                </div>
+
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption tp-resizeme text-right text-white"
+                     id="rs-1-layer-3"
+                     data-x="['right']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['30']"
+                     data-fontsize="['18']"
+                     data-lineheight="['34']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1400"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:400;">
+                    We always provide our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                </div>
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption tp-resizeme"
+                     id="rs-1-layer-4"
+                     data-x="['right']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['100']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1600"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                    @*<a class="btn btn-colored btn-lg" href="#">Request Quote</a>*@
+                </div>
+            </li>
+
+            <!-- SLIDE 3 -->
+            <li data-index="rs-2" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/content/images/slider/thumb-3.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="~/content/images/slider/3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                <!-- LAYERS -->
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption tp-resizeme text-center text-white"
+                     id="rs-2-layer-2"
+                     data-x="['center']"
+                     data-hoffset="['0']"
+                     data-y="['middle']"
+                     data-voffset="['-60']"
+                     data-fontsize="['26']"
+                     data-lineheight="['64']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:400;">
+                    Deliveries within 24 hours to 96 hours depending on destination country.
+                </div>
+
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption tp-resizeme text-uppercase text-white font-merry"
+                     id="rs-2-layer-3"
+                     data-x="['center']"
+                     data-hoffset="['0']"
+                     data-y="['middle']"
+                     data-voffset="['0']"
+                     data-fontsize="['40']"
+                     data-lineheight="['80']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:700;">
+                    We Provide the Best Solutions
+                </div>
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption tp-resizeme"
+                     id="rs-2-layer-4"
+                     data-x="['center']"
+                     data-hoffset="['0']"
+                     data-y="['middle']"
+                     data-voffset="['80']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1400"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                    @*<a class="btn btn-colored  btn-lg" href="#">Contact Now</a>*@
+                </div>
+            </li>
+
+            <!-- SLIDE 4 -->
+            <li data-index="rs-3" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/content/images/slider/thumb-4.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="~/content/images/slider/4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                <!-- LAYERS -->
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption tp-resizeme text-white text-uppercase"
+                     id="rs-3-layer-5"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-125']"
+                     data-fontsize="['26']"
+                     data-lineheight="['64']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:700;">
+                    Ground Or Air
+                </div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption tp-resizeme text-uppercase font-merry"
+                     id="rs-3-layer-8"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['-60']"
+                     data-fontsize="['40']"
+                     data-lineheight="['84']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1000"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:600; ">
+                    <span class="text-white">Providing Logistics Services</span>
+                </div>
+
+                <!-- LAYER NR. 3 -->
+                <div class="tp-caption tp-resizeme text-white"
+                     id="rs-3-layer-9"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['20']"
+                     data-fontsize="['18']"
+                     data-lineheight="['34']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1400"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; font-weight:300;">
+                    We always provide our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                </div>
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption tp-resizeme"
+                     id="rs-3-layer-10"
+                     data-x="['left']"
+                     data-hoffset="['30']"
+                     data-y="['middle']"
+                     data-voffset="['100']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+                     data-transform_idle="o:1;s:500"
+                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                     data-start="1600"
+                     data-splitin="none"
+                     data-splitout="none"
+                     data-responsive_offset="on"
+                     style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                    <a class="btn btn-colored btn-lg" href="@Url.Action("Services", "Home")">View Services</a>
+                </div>
+            </li>
+
+        </ul>
+    </div><!-- end .rev_slider -->
+</div>
+<!--======= HOME SLIDER END =========-->
+
+
+
+<!-- =-=-=-=-=-=-= HOME Banner =-=-=-=-=-=-= -->
+<div class="hero-3 full-section " id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Track Your Shipment</h2>
+                <div class="form">
+                    @using ( Html.BeginForm() )
+                    {
+                        @Html.TextBox( "TrackingNumber", null, new {@class = "form-control", @placeholder = "Your Tracking Number eg. (12345-12345)"} )
+                        <button id="btnTrack" type="submit" data-loading-text = "Wait...">Track</button>
+                    }
+                    @*<span class="declaration">We hate spam. You can trust us, we won't use your email</span>*@
+                </div>
+            </div>
+            <div class="col-md-5">
+                <p class="lead text-justify">SafeFreight Logistics is an international freight forwarder for international businesses. Innovative operational techniques enable us to enjoy almost immediate success and growth. We achieve this by assisting them to align the right strategies for their input supply, product distribution and costs reduction.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--======= HOME Banner END =========-->
+
+
+
+
+@section scripts
+{
+    <!-- Jquery For Home Page Only  -->
+<!-- Revolution Slider 5.x SCRIPTS -->
+<script src="~/content/js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script src="~/content/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+<script src="~/content/js/custom.js"></script>
+<script type="text/javascript">
+              $(document).ready(function(e) {
+                var revapi = $(".rev_slider").revolution({
+                  sliderType:"standard",
+                  jsFileLocation: "~/content/js/revolution-slider/js/",
+                  sliderLayout: "auto",
+                  dottedOverlay: "none",
+                  delay: 5000,
+                  navigation: {
+                      keyboardNavigation: "off",
+                      keyboard_direction: "horizontal",
+                      mouseScrollNavigation: "off",
+                      onHoverStop: "off",
+                      touch: {
+                          touchenabled: "on",
+                          swipe_threshold: 75,
+                          swipe_min_touches: 1,
+                          swipe_direction: "horizontal",
+                          drag_block_vertical: false
+                      },
+                      arrows: {
+                          style: "gyges",
+                          enable: true,
+                          hide_onmobile: false,
+                          hide_onleave: true,
+                          hide_delay: 200,
+                          hide_delay_mobile: 1200,
+                          tmp: '',
+                          left: {
+                              h_align: "left",
+                              v_align: "center",
+                              h_offset: 0,
+                              v_offset: 0
+                          },
+                          right: {
+                              h_align: "right",
+                              v_align: "center",
+                              h_offset: 0,
+                              v_offset: 0
+                          }
+                      },
+
+                        bullets: {
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_under: 800,
+                        style: "hebe",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 0,
+                        v_offset: 30,
+                        space: 5,
+                        tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
+                    }
+                  },
+                  responsiveLevels: [1240, 1024, 778],
+                  visibilityLevels: [1240, 1024, 778],
+                  gridwidth: [1170, 1024, 778, 480],
+                  gridheight: [620, 768, 960, 720],
+                  lazyType: "none",
+                  parallax: {
+					type: "scroll",
+					origo: "slidercenter",
+					speed: 1000,
+					levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 100, 55],
+					type: "scroll",
+                  },
+                  shadow: 0,
+                  spinner: "off",
+                  stopLoop: "on",
+                  stopAfterLoops: 0,
+                  stopAtSlide: -1,
+                  shuffle: "off",
+                  autoHeight: "off",
+                  fullScreenAutoWidth: "off",
+                  fullScreenAlignForce: "off",
+                  fullScreenOffsetContainer: "",
+                  fullScreenOffset: "0",
+                  hideThumbsOnMobile: "off",
+                  hideSliderAtLimit: 0,
+                  hideCaptionAtLimit: 0,
+                  hideAllCaptionAtLilmit: 0,
+                  debugMode: false,
+                  fallbacks: {
+                      simplifyAll: "off",
+                      nextSlideOnWindowFocus: "off",
+                      disableFocusListener: false,
+                  }
+                });
+
+
+                $(".form form").submit(function (e)
+                {
+                    e.preventDefault(); //Prevent form submission
+
+                    //$("#btnTrack").html("Wait...");
+                    //$("#btnTrack").prop("disabled", true);
+                    var $btn = $("#btnTrack").button('loading');
+
+                    if ($.trim($("#TrackingNumber").val()) === "")
+                    {
+                        //Please enter your package tracking number!
+                        ShowMessageBox("Invalid Entry", "Please enter your tracking number!!!");
+
+                        //$("#btnTrack").html("Track");
+                        //$("#btnTrack").prop("disabled", false);
+                        $btn.button('reset');
+                    }
+                    else
+                    {
+                        $.get('@Url.Action("CheckTrackingNumber", "Mathely_Logistics_Shipments")', { TrackingNumber: $.trim($("#TrackingNumber").val()) }, function (data)
+                        {
+                            if (data === "Not Found")
+                            {
+                                //That tracking number is incorrect!
+                                ShowMessageBox("Entry Error", "That tracking number is incorrect or doesn't exist!!!");
+
+                                //$("#btnTrack").html("Track");
+                                //$("#btnTrack").prop("disabled", false);
+                                $btn.button('reset');
+                            }
+                            else if (data === "Error")
+                            {
+                                ShowMessageBox("Processing Error", "Oops!!! Something went wrong!");
+
+                                //$("#btnTrack").html("Track");
+                                //$("#btnTrack").prop("disabled", false);
+                                $btn.button('reset');
+                            }
+                            else
+                            {
+                                location.href = '/Mathely_Logistics_Shipments/Search?TrackingNumber=' + $.trim($("#TrackingNumber").val());
+                            }
+                        });
+                    }
+
+                    
+                  });
+
+                  
+              });
+</script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+      (Load Extensions only on Local File Systems !
+       The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="~/content/js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+}

@@ -1,0 +1,146 @@
+/*  RED  */
+
+a , a:hover, a:focus , .header-area .logo-bar .info-box .icon, .slider-grids .tt-slider-title, .icons , .choose-box:hover .iconbox i, .choose-box:hover h4 , .news-detail h2:hover, .news-detail h2 a:hover , .footer-area .contact-info li:hover, footer-area .contact-info li a:hover , .footer-content .links-widget li:hover, .footer-content .links-widget li a:hover , .footer-content .news-widget .news-post a:hover,.portfolio-info .links a, .portfolio-details a, .portfolio-details a i, .slider-caption h1,.latest-news h4:hover, .latest-news h4 a:hover, .side-bar .widget ul li a:hover, .comment li a, .comment li a:hover, .choose-title:hover h2, .footer-content .column h2:hover, .footer-content .column h2 a:hover , .header-area .logo-bar .info-box div.text:hover, .navigation .navbar-default .navbar-nav > li > a:hover , .services-box-2 i, .error-text, .services-text:hover h4, .services-text:hover h4 a , .services-box-2:hover h4, .services-box-2:hover h4 a  {
+	color: #f43438 !important;
+}
+.navigation .dropdown-menu>li>a:hover, .navigation .dropdown-menu>li>a:focus, .navigation-2 .dropdown-menu>li>a:hover, .navigation-2 .dropdown-menu>li>a:focus ,.navigation-2 .navbar-default .navbar-nav>li>a:focus, .navigation-2 .navbar-default .navbar-nav>li>a:hover, .navigation-2 .navbar-default .navbar-nav>.open>a, .navigation-2 .navbar-default .navbar-nav>.open>a:focus, .navigation-2 .navbar-default .navbar-nav>.open>a:hover , .navigation-2 .navbar-default .navbar-toggle .icon-bar, #main-navigation .navbar-nav li.active , .top-bar .social-icons li a:hover{
+	color: #fff !important;
+	background-color: #f43438 !important;
+}
+.navigation .navbar-default .navbar-nav > .open > a, .navigation .navbar-default .navbar-nav > .open > a:focus, .navigation .navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+    color: #f43438 !important;
+}
+.top-bar .nav-right > li > a:hover {
+    color:#f43438 !important;
+ }
+  .btn-colored {
+    background-color: #f43438 !important;
+ }
+ .btn-colored:hover {
+     background-color: #c3292c !important;
+    border-color: #c3292c !important;
+    color: #fff !important;
+ }
+.nav-right  .dropdown-menu li a:hover, .nav-right  .dropdown-menu li a:focus{
+     background-color: #f43438 !important;
+}
+.profile-tabs .nav-tabs > .active > a, .profile-tabs .nav-tabs > .active > a:hover, .profile-tabs .nav-tabs > .active > a:focus {
+    background: #f43438  none repeat scroll 0 0 !important;
+}  
+.profile-tabs .nav-tabs {
+    border-color: -moz-use-text-color -moz-use-text-color #f43438 !important;
+}
+.profile-tabs .nav-tabs > li > a:hover {
+    background: #f43438 none repeat scroll 0 0 !important;
+}
+.profile-usermenu ul li.active a {
+    border-left: 2px solid #f43438 !important;
+}
+.btn-primary {
+    background-color: #f43438 !important;
+    border-color: #f43438 !important;
+	color:#fff !important;
+}
+.btn-primary:hover {
+    background-color: #c3292c !important;
+    border-color: #c3292c !important;
+    color: #fff !important;
+}
+.process-icon {
+    box-shadow: 0 0 0 2px #f43438 !important;
+ }
+ .process-icon i {
+    color: #f43438 !important;
+ }
+ .our-app .btn:hover {
+     background-color: #f43438 !important;
+     border:1px solid #f43438 !important;
+  }
+ .our-process ul li:hover .process-icon {
+     background:#f43438 !important;
+}
+#banner.hero-3 .form button {
+    background: #f43438 none repeat scroll 0 0 !important;
+ }
+ #banner.hero-3 .form button:hover {
+    background: #c3292c none repeat scroll 0 0 !important;
+ }
+.top-bar.color-scheme .social-icons li a:hover {
+    background:none !important; 
+}
+.parallex-small, .quote .quotation-box , .quotation-box-1 {
+    background: #f43438 none repeat scroll 0 0 !important;
+}
+.services-grid:hover, .services-grid::before, clients-grid:hover {
+    border: 2px solid #f43438 !important;
+}
+blockquote {
+    border-left: 5px solid #f43438 !important;
+}
+.parallex::before {
+    background: rgba(244, 52, 56, 0.9) !important;
+}
+.date > span , #clients .owl-prev, #clients .owl-next, #testimonials .owl-next, #testimonials .owl-prev, #services .owl-next, #services .owl-prev , #post-slider .owl-prev, #post-slider .owl-next {
+    background-color: #f43438 !important;
+}
+.news-detail h2, .news-detail h2 a , .slider-caption .btn:hover{
+    color: #323232 !important;	
+}
+
+#clients .owl-prev:hover, #clients .owl-next:hover, #testimonials .owl-next:hover, #testimonials .owl-prev:hover, #services .owl-next:hover, #services .owl-prev:hover, #post-slider .owl-prev:hover, #post-slider .owl-next:hover {
+    background-color: #c3292c !important;
+}
+.clients-grid:hover {
+    border: 2px solid #f43438 !important;
+}
+.social-links-two a:hover {
+    background: #f43438 none repeat scroll 0 0 !important;
+    border-color: #f43438 !important;
+    color: #fff !important;
+}
+.top-bar.color-scheme {
+    background: #f43438 none repeat scroll 0 0 !important;
+    border-bottom: 1px solid #c3292c !important;
+}
+.services-box-2 i {
+    border: 3px solid #f43438 !important;
+}
+.team-content {
+    background: #f43438 none repeat !important;
+}
+.accordion-box .accordion .accord-btn.active {
+    background: #f43438 none repeat scroll 0 0 !important;
+    border-color: #f43438 !important;
+    color: #ffffff !important;
+}
+ul.side-bar-list li a:hover, ul.side-bar-list li a.active {
+    background: #f43438 none repeat scroll 0 0 !important;
+}
+.pagination > .active > a:hover, .pagination li:hover > a, .pagination > .active > a {
+    background-color: #f43438 !important;
+    border-color: #f43438 !important;
+	color:#fff !important;
+}
+.side-bar .widget h2::before {
+    background-color: #f43438 !important;
+}
+.side-bar .widget .tag_cloud a:hover, .post-bottom .tag_cloud a:hover {
+	color: #fff !important;
+	background: #f43438 repeat !important;
+	border: 1px solid #f43438 !important;
+}
+.post-bottom .social-icons a:hover {
+	color: #fff !important;
+	background: #f43438 repeat !important;
+}
+.custom-heading h2::before {
+    background-color: #f43438  !important;
+}
+.main-top .scroll-down::before, .main-top .scroll-down::after {
+    border-bottom: 2px solid #f43438 !important;
+    border-right: 2px solid #f43438 !important;
+}
+.main-top span#js-rotating {
+	color:#f43438 !important;
+}
